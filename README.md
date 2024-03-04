@@ -14,7 +14,7 @@ This project implements a multiclass classification machine learning model using
 ## Project Structure
 - `app.py`: Flask application file
 - `templates/`: HTML templates directory
-- `static/`: CSS and frontend assets directory
+- `Internal-style-sheet`: CSS 
 
 ## Deployment Process
 - Provisioned an AWS EC2 instance

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiclass Classification</title>
+    <style>
+        /* Set width and display for each group */
+        .input-group {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-bottom: 10px; /* Add margin between groups */
+        }
+
+        /* Set width for labels */
+        .input-group label {
+            width: 15%;
+            font-size: 14px;
+        }
+        #last input{
+            width:50%;
+        }
+
+        /* Set width for inputs */
+        .input-group input {
+            width: 20%; /* Adjust width as needed */
+        }
+        div label{
+            margin-left:1%;
+                font-weight: bold;
+        }
+        body{
+            background-color: lightslategrey;
+        }
+        h1{
+        margin-left:30%;
+        }
+        #mybutton{
+                width: 150px;
+                 border-radius: 6px;
+                height: 30px;
+                margin-left:46%;
+        }
+        #mybutton:hover{
+            background-color:black;
+            color:white;
+        }
+        input:hover{
+            border:2px green solid;
+        }
+        .sh{
+           background-color:black;
+           color:white;
+        }
+        h3{
+          color: white;
+          border: 2px red solid;
+          width:fit-content;
+
+          }
+          #res{
+          background-color:red;
+          color:white;
+          }
+    </style>
+</head>
+<body>
+    <div class="sh">
+        <h1>Multiclassification ML App</h1>
+    </div>
+    <div>
+        <h2>Result Will be shown here</h2>
+    </div>
+<!--    jija platfor ables us to write python inside html-->
+    {% if result %}
+        <span>This Sample belongs to class:</span>
+        <span id="res">{{ result }}</span>
+    {% endif %}
+    <br>
+    <br>
+<!--    whenver we click on submit button /predict route will be called by route-->
+    <form method="post" action="/predict">
+        <!-- Group 1 -->
+        <div class="input-group">
+            <label>Column1:</label>
+            <input type="text" name="1" placeholder="Enter value 1">
+            <label>Column2:</label>
+            <input type="text" name="2" placeholder="Enter value 2">
+            <label>Column3:</label>
+            <input type="text" name="3" placeholder="Enter value 3">
+            <label>Column4:</label>
+            <input type="text" name="4" placeholder="Enter value 4">
+        </div>
+
+        <!-- Group 2 -->
+        <div class="input-group">
+            <label>Column5:</label>
+            <input type="text" name="5" placeholder="Enter value 5">
+            <label>Column6:</label>
+            <input type="text" name="6" placeholder="Enter value 6">
+            <label>Column7:</label>
+            <input type="text" name="7" placeholder="Enter value 7">
+            <label>Column8:</label>
+            <input type="text" name="8" placeholder="Enter value 8">
+        </div>
+
+        <!-- Group 3 -->
+        <div class="input-group">
+            <label>Column9:</label>
+            <input type="text" name="9" placeholder="Enter value 9">
+            <label>Column10:</label>
+            <input type="text" name="10" placeholder="Enter value 10">
+            <label>Column11:</label>
+            <input type="text" name="11" placeholder="Enter value 11">
+            <label>Column12:</label>
+            <input type="text" name="12" placeholder="Enter value 12">
+        </div>
+
+        <!-- Group 4 -->
+        <div class="input-group">
+            <label>Column13:</label>
+            <input type="text" name="13" placeholder="Enter value 13">
+            <label>Column14:</label>
+            <input type="text" name="14" placeholder="Enter value 14">
+            <label>Column15:</label>
+            <input type="text" name="15" placeholder="Enter value 15">
+            <label>Column16:</label>
+            <input type="text" name="16" placeholder="Enter value 16">
+        </div>
+
+        <!-- Group 5 -->
+        <div class="input-group" id="last">
+            <label>Column17:</label>
+            <input type="text" name="17" placeholder="Enter value 17">
+            <label>Column18:</label>
+            <input type="text" name="18" placeholder="Enter value 18">
+        </div>
+            <input type="submit" value="Predict" id="mybutton">
+    </form>
+</body>
+</html>
